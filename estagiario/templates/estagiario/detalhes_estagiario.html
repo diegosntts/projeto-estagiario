@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    <div class="row detalhes-estagiario">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Dados pessoais</div>
+                <div class="card-body cards-detalhes-body">
+                    <dl>
+                        <dt>Nome</dt>
+                        <dd>{{ estagiario.nome }}</dd>
+
+                        <dt>CPF</dt>
+                        <dd>{{ estagiario.cpf }}</dd>
+
+                        <dt>Email</dt>
+                        <dd>{{ estagiario.email }}</dd>
+
+                        <dt>Telefone</dt>
+                        <dd>{{ estagiario.telefone }}</dd>
+
+                        <dt>Data de nascimento</dt>
+                        <dd>{{ estagiario.dt_nascimento }}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Dados do contrato</div>
+                <div class="card-body">
+                    <dl>
+                        <dt>Número do contrato</dt>
+                        <dd>{{ estagiario.n_contrato }}</dd>
+
+                        <dt>Descrição do contrato</dt>
+                        <dd>{{ estagiario.contrato }}</dd>
+
+                        <dt>Contrato PDF</dt>
+                        <dd><a href="{{ estagiario.documento.url }}" target="_blank">Vizualizar Contrato</a></dd>
+
+                        <dt>Inicio do contrato</dt>
+                        <dd>{{ estagiario.inicio_contrato }}</dd>
+
+                        <dt>Fim do contrato</dt>
+                        <dd>{{ estagiario.fim_contrato }}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Dados acadêmicos</div>
+                <div class="card-body">
+                    <dl>
+                        <dt>Instituição de ensino</dt>
+                        <dd>{{ estagiario.instituicao_edu }}</dd>
+
+                        <dt>Curso</dt>
+                        <dd>{{ estagiario.curso }}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header">Dados do estágio</div>
+                <div class="card-body">
+                    <dl>
+                        <dt>Orgão</dt>
+                        <dd>{{ estagiario.orgao }}</dd>
+
+                        <dt>Setor</dt>
+                        <dd>{{ estagiario.setor }}</dd>
+
+                        <dt>Status</dt>
+                        {% if estagiario.status == True %}
+                        <dd>Ativo</dd>
+                        {% endif %}
+
+                        {% if estagiario.status == False %}
+                        <dd>Inativo</dd>
+                        {% endif %}
+
+                        <dt>Data de cadastro</dt>
+                        <dd>{{ estagiario.dt_cadastro }}</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a class="botao-editar btn btn-primary" href="{% url 'editar_estagiario' estagiario.pk %}"><i class="far fa-edit"></i>  Editar</a>
+    <a class="botao-voltar btn btn-primary" href="{% url 'index' %}"><i class="fas fa-chevron-left"></i>  Voltar</a>
+
+{% endblock %}

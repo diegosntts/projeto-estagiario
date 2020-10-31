@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <br>
+    <h3>Estagiarios</h3>
+
+    <div class="container">
+
+        <div class="d-flex flex-row-reverse">
+          <div class="p-2"><h5 class="estagiarios-ativos">Estagiários Ativos: {{ estagiarios.count }}</h5></div>
+        </div>
+
+    <div class="d-flex justify-content-center">
+        <form action="." method="GET" class="form-inline">
+          <input type="text" id="search" name="search" class="form-control" placeholder="Busca">
+          <input type="submit" class="btn btn-primary" style="margin-left: 10px;" value="OK">
+        </form>
+    </div>
+
+        <table class="table table-bordered tabela">
+            <div class="tabela-head d-flex justify-content-center">Estagiários</div>
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Contrato</th>
+                    <th scope="col">Setor</th>
+                    <th scope="col">IES</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for estagiario in estagiarios %}
+                <tr>
+
+                    <td>{{ estagiario.nome }}</td>
+                    <td>{{ estagiario.n_contrato }}</td></th>
+                    <td>{{ estagiario.setor }}</td>
+                    <td>{{ estagiario.instituicao_edu }}</td>
+
+                    <td>
+                    {% if estagiario.status == True %}
+                    <i title="Ativo" class="fas fa-check-circle"></i>
+                    {% endif %}
+
+                    {% if estagiario.avencer == 1 %}
+                    <i title="Contrato com vencimento próximo" class="fas fa-exclamation-triangle"></i>
+                    {% endif %}
+
+                    {% if estagiario.vencidos == 1 %}
+                    <i title="Contrato vencido" class="fas fa-clock"></i>
+                    {% endif %}
+
+                    <a title="Visualizar contrato" href="{{ estagiario.documento.url }}" target="_blank"><i class="fas fa-file-pdf"></i></a>
+                    </td>
+                    <td>
+                        <a class="link-detalhes" href="{% url 'exibir_estagiario' estagiario.id %}"><i class="fas fa-id-badge"></i>  Detalhes</a>
+                        <a class="link-editar" href="{% url 'editar_estagiario' estagiario.pk %}"><i class="fas fa-edit"></i>  Editar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    <div class="d-flex justify-content-center">
+    <div class="pagination">
+          <span class="step-links">
+              {% if estagiarios.has_previous %}
+                  <a href="?page={{ estagiarios.previous_page_number }}"><i class="fas fa-arrow-left"></i></a>
+              {% endif %}
+
+              {% if estagiarios.paginator.num_pages %}
+              <span class="current">
+                  {{ estagiarios.number }} de {{ estagiarios.paginator.num_pages }}
+              </span>
+              {% endif %}
+
+              {% if estagiarios.has_next %}
+                  <a href="?page={{ estagiarios.next_page_number }}"><i class="fas fa-arrow-right"></i></a>
+              {% endif %}
+          </span>
+      </div>
+    </div>
+        <div class="d-flex flex-row-reverse">
+          <div class="p-2"><a href="{% url 'inativos' %}"><h5><i title="Inativos" class="fas fa-ban"></i>  Exibir Estagiários Inativos</h5></a></div>
+        </div>
+        <a class="botao-cadastrar btn btn-primary" href="{% url 'cadastrar_estagiario' %}"><i class="far fa-id-badge"></i>  Cadastrar</a>
+    </div>
+
+
+  {% endblock %}

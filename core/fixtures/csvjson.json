@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nome": "ADMINISTRAÇÃO"
+  },
+  {
+    "id": 2,
+    "nome": "REDES DE COMPUTADORES"
+  },
+  {
+    "id": 3,
+    "nome": "ADMINISTRAÇÃO PÚBLICA"
+  },
+  {
+    "id": 4,
+    "nome": "ANÁLISE E DESENVOLVIMENTO DE SISTEMAS"
+  },
+  {
+    "id": 5,
+    "nome": "ARQUITETURA E URBANISMO"
+  },
+  {
+    "id": 6,
+    "nome": "ARTES VISUAIS"
+  },
+  {
+    "id": 7,
+    "nome": "BIBLIOTECONOMIA"
+  },
+  {
+    "id_curso": 2000122,
+    "nome": "BIOMEDICINA"
+  },
+  {
+    "id_curso": 2000013,
+    "nome": "CIÊNCIA DA COMPUTAÇÃO"
+  },
+  {
+    "id_curso": 6633741,
+    "nome": "CIÊNCIAS ATUARIAIS"
+  },
+  {
+    "id_curso": 2000009,
+    "nome": "CIÊNCIAS BIOLÓGICAS"
+  },
+  {
+    "id_curso": 111635035,
+    "nome": "CIÊNCIAS BIOLÓGICAS"
+  },
+  {
+    "id_curso": 9295710,
+    "nome": "CIÊNCIAS BIOLÓGICAS"
+  },
+  {
+    "id_curso": 2000012,
+    "nome": "CIÊNCIAS CONTÁBEIS"
+  },
+  {
+    "id_curso": 2000011,
+    "nome": "CIÊNCIAS CONTÁBEIS"
+  },
+  {
+    "id_curso": 2000014,
+    "nome": "CIÊNCIAS ECONÔMICAS"
+  },
+  {
+    "id_curso": 10320810,
+    "nome": "CIÊNCIAS E TECNOLOGIA"
+  },
+  {
+    "id_curso": 2000015,
+    "nome": "CIÊNCIAS SOCIAIS"
+  },
+  {
+    "id_curso": 102191189,
+    "nome": "CIÊNCIAS SOCIAIS"
+  },
+  {
+    "id_curso": 111635038,
+    "nome": "CIÊNCIAS SOCIAIS"
+  },
+  {
+    "id_curso": 2000016,
+    "nome": "COMUNICAÇÃO SOCIAL"
+  },
+  {
+    "id_curso": 119512361,
+    "nome": "COMUNICAÇÃO SOCIAL - AUDIOVISUAL"
+  },
+  {
+    "id_curso": 118834827,
+    "nome": "COMUNICAÇÃO SOCIAL- PUBLICIDADE E PROPAGANDA"
+  },
+  {
+    "id_curso": 7264330,
+    "nome": "DANÇA"
+  },
+  {
+    "id_curso": 6992521,
+    "nome": "DESIGN"
+  },
+  {
+    "id_curso": 2000018,
+    "nome": "DIREITO"
+  },
+  {
+    "id_curso": 2000019,
+    "nome": "DIREITO"
+  },
+  {
+    "id_curso": 2000121,
+    "nome": "ECOLOGIA"
+  },
+  {
+    "id_curso": 50688664,
+    "nome": "EDUCAÇÃO FÍSICA"
+  },
+  {
+    "id_curso": 111635041,
+    "nome": "EDUCAÇÃO FÍSICA"
+  },
+  {
+    "id_curso": 85436676,
+    "nome": "EDUCAÇÃO FÍSICA"
+  },
+  {
+    "id_curso": 2000022,
+    "nome": "EDUCAÇÃO FÍSICA"
+  },
+  {
+    "id_curso": 13027790,
+    "nome": "ENFERMAGEM"
+  },
+  {
+    "id_curso": 2000023,
+    "nome": "ENFERMAGEM"
+  },
+  {
+    "id_curso": 2576632,
+    "nome": "ENGENHARIA AGRONÔMICA"
+  }
+]

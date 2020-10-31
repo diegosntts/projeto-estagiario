@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <br>
+    <h3>Estagiarios Inativos</h3>
+
+    <div class="container">
+
+        <div class="d-flex flex-row-reverse">
+          <div class="p-2"><h5 class="estagiarios-ativos">Estagiários Inativos: {{ estagiarios.count }}</h5></div>
+        </div>
+
+        <table class="table table-bordered tabela">
+            <div class="tabela-head d-flex justify-content-center">Estagiários</div>
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Contrato</th>
+                    <th scope="col">Setor</th>
+                    <th scope="col">IES</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for estagiario in estagiarios %}
+                <tr>
+
+                    <td>{{ estagiario.nome }}</td>
+                    <td>{{ estagiario.n_contrato }}</td></th>
+                    <td>{{ estagiario.setor }}</td>
+                    <td>{{ estagiario.instituicao_edu }}</td>
+
+                    <td>
+                    {% if estagiario.status == False %}
+                    <i title="Inativo" class="fas fa-ban"></i>
+                    {% endif %}
+                    <!--<i class="icone-card fas fa-ban"></i>-->
+
+                    {% if estagiario.avencer == 1 %}
+                    <i title="Contrato com vencimento próximo" class="fas fa-exclamation-triangle"></i>
+                    {% endif %}
+
+                    {% if estagiario.vencidos == 1 %}
+                    <i title="Contrato vencido" class="fas fa-clock"></i>
+                    {% endif %}
+
+                    <a title="Visualizar contrato" href="{{ estagiario.documento.url }}" target="_blank"><i class="fas fa-file-pdf"></i></a>
+                    </td>
+
+                    <td>
+                        <a class="link-detalhes" href="{% url 'exibir_estagiario' estagiario.id %}"><i class="fas fa-id-badge"></i>  Detalhes</a>
+                        <a class="link-editar" href="{% url 'editar_estagiario' estagiario.pk %}"><i class="fas fa-edit"></i>  Editar</a>
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+        <a class="botao-voltar btn btn-primary" href="{% url 'index' %}"><i class="fas fa-chevron-left"></i>  Voltar</a>
+
+
+    </div>
+
+
+
+  {% endblock %}

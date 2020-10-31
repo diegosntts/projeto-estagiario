@@ -1,0 +1,150 @@
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+/* NAV */
+.navbar{
+    background-color: #1b3280;
+    color: #FFF;
+    height: 66px
+}
+
+.nav-link{
+    color: #FFFFFF;
+}
+
+/* CONTEUDO */
+.estagiarios-ativos{
+    text-align: right;
+
+}
+
+/* TABELA */
+.tabela {
+    background-color: #DCDCDC;
+}
+.tabela-head {
+    background-color: #1b3280;
+    color: #FFFFFF;
+}
+thead{
+    background-color: #A9A9A9
+}
+.fa-check-circle {
+    color: green;
+}
+
+.fa-ban{
+    color: darkred;
+}
+
+.fa-exclamation-triangle{
+    color: #ff8c00 ;
+    opacity: 1;
+}
+@keyframes anima {
+    to {
+        opacity:0;
+    }
+}
+td {
+    cursor: pointer;
+}
+.fa-exclamation-triangle{
+    animation: anima 900ms ease infinite;
+}
+
+.fa-clock{
+    color: #ff8c00 ;
+}
+
+.fa-file-pdf{
+    color: #831d1c;
+}
+
+.link-detalhes{
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+}
+
+.link-editar{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* FOOTER */
+footer{
+    margin-top: auto;
+    background-color: #1b3280;
+    position:relative;
+    width:100%;
+    padding: 30px 0px;
+    line-height: 1.15;
+    text-align: center;
+    border: 0;
+    height: auto;
+}
+
+.footer-conteudo{
+    color: #FFFFFF;
+}
+a.links-footer{
+    color: white;
+    text-decoration: none;
+}
+
+/* DETALHES DO ESTAGIARIO */
+
+.card{
+    margin-top: 25px;
+}
+.card-header{
+    background-color: #1b3280;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-body{
+    background-color: #DCDCDC;
+}
+
+.botao-editar{
+    background-color: #1b3280;
+    color: #FFFFFF;
+    border-color: #1b3280;
+}
+
+.botao-voltar{
+    background-color: #DCDCDC;
+    color: #1b3280;
+    border-color: #DCDCDC;
+}
+
+.botao-cadastrar{
+    background-color: #1b3280;
+    color: #FFFFFF;
+    border-color: #1b3280;
+}
+/* Paginação */
+.pagination {
+    margin-bottom: 20px;
+}
+
+.step-links {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-links .current {
+    margin-left: 5px;
+    margin-right: 5px;
+}
